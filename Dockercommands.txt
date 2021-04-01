@@ -1,0 +1,53 @@
+COMMMANDS:
+
+docker pull imagename         --->pulls image from dockerhub
+docker run imagename         ---> create container from the image
+docker images  -------> show all images
+docker ps -a     --------> GET ALL THE RUNNING + Stoped CONTAINERS
+docker ps         --------->shows only the running containers.
+
+want to start/stop container: 
+docker stop 24343(container id)
+docker start 24242(runs stop container)
+
+
+Build a docker image: 
+docker build  .   				             -->(must be in the location where your Dockerfile exist / created without name)
+or
+docker build -t yourimagename .        -->(building image by taging it with your name)
+or
+docker build -t yourimagename:1.0 .  -->(tag with version)
+
+Running Docker image :
+
+docker run yourimagename 
+
+or
+
+docker run  -p 80:3005 yourimagename  (runs on selected port of your choice)
+
+or 
+
+docker run --name yourcontainername -p 80:3005 yourimagename (assigns container name)
+
+-d = detached mode. (runs sparately)
+docker run -d image name 
+
+
+-----------------------------------------------------------------------------------------------------------
+Pushing your build image to Dockerhub
+
+With your Docker Hub credentials, you need only to log in with your username and password.
+
+$ docker login
+
+Retag the image withyour Docker repository user name:
+
+$ docker tag yourimagename yourdockerhubusername/yourimagename:v1
+
+Then push with the following:
+
+$ docker push yourdockerhubusername/yourimage:v1
+
+
+
