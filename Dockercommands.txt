@@ -50,4 +50,17 @@ Then push with the following:
 $ docker push yourdockerhubusername/yourimage:v1
 
 
+-------------------------------------------GIT BASICS
+GIT: tool or vcs that help us track and merge changes
+
+GIT HUB: git server that host remote repositoies
+
+git basic commands :
+
+1. git init 
+2. git add .
+3. git commit -m "Initial Commit"
+git remote add origin https://github.com/mohdazhar01/k (Github repository URL)
+$ git push origin your-branch
+# Pushes the changes in your local repository up to the remote repository you specified as the origin
 
